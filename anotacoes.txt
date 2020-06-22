@@ -1,0 +1,12 @@
+Anotações
+
+- Parâmetros função 'image':
+imagem à ser exibida;
+posição x na tela;
+posição y na tela;
+tamanho x da imagem;
+tamanho y da imagem;
+posição x dentro da imagem;
+posição y dentro da imagem;
+posição extrema x dentro da imagem;
+posição extrema y dentro da imagem.
