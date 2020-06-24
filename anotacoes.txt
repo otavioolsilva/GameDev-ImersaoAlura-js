@@ -10,3 +10,28 @@ posição x dentro da imagem;
 posição y dentro da imagem;
 posição extrema x dentro da imagem;
 posição extrema y dentro da imagem.
+
+- Parâmetros text:
+texto;
+posição x na tela;
+posição y na tela.
+*Para tamanho, utilize a função textSize()
+*Para cor, fill('HEX')
+
+- Parâmetros collideRectRect (script colisão):
+posição x primeiro retângulo;
+posição y primeiro retângulo;
+largura primeiro retângulo;
+altura primeiro retângulo;
+posição x segundo retângulo;
+posição y segundo retângulo;
+largura segundo retângulo;
+altura segundo retângulo.
+
+- Parâmetros collideCircleCircle (script colisão):
+posição x primeiro círculo;
+posição y primeiro círculo;
+diâmetro do primeiro retângulo;
+posição x segundo círculo;
+posição y segundo círculo;
+diâmetro do segundo retângulo.
