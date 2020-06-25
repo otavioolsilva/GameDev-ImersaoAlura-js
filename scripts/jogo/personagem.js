@@ -31,14 +31,7 @@ class Personagem extends Animacao {
   }
 
   colisao(inimigo, largura, altura) {
-    const precisao = 0.64;
-    const estado = collideRectRect(this.x, this.y, this.largura * precisao, this.altura * precisao, inimigo.x, inimigo.y, inimigo.largura * precisao, inimigo.altura * precisao);
-
-    /* tentativa de aumentar precisao
-    noFill();
-    circle(this.x+55, this.y+70, this.altura/1.8);
-    circle(inimigo.x + (this.largura/3), inimigo.y + (this.altura/4), inimigo.altura);
-    const estado = collideCircleCircle(this.x+55, this.y*1.2, this.altura/1.8, inimigo.x, inimigo.y, inimigo.altura);*/
+    const estado = collideCircleCircle(this.x+55, this.y+70, this.altura/1.6, inimigo.x + (inimigo.largura/1.7), inimigo.y + (inimigo.altura/1.7), inimigo.altura/1.2);
     
     return estado;
   }

@@ -4,6 +4,7 @@ class Pontuacao {
   }
   
   exibe() {
+    textFont(fonte);
     textAlign(RIGHT);
     fill('#fff');
     textSize(30);

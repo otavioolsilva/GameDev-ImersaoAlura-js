@@ -17,6 +17,8 @@ posição x na tela;
 posição y na tela.
 *Para tamanho, utilize a função textSize()
 *Para cor, fill('HEX')
+*Para fonte, textFont()
+*Para alinhamento, textAlign();
 
 - Parâmetros collideRectRect (script colisão):
 posição x primeiro retângulo;
