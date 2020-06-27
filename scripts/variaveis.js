@@ -1,3 +1,5 @@
+let cartucho;
+
 let cenaAtual = 'telaInicial';
 let cenas;
 let fonte;
@@ -7,6 +9,7 @@ let jogo;
 let gameover;
 
 let imgTelaInicial;
+let imgSpacebar;
 
 let imgCenario01;
 let cenario01;
@@ -30,8 +33,12 @@ let inimigoGrande;
 
 let imgGameOver;
 
+let imgVida;
+let vida;
+
 let somFundo;
 let somPulo;
+let somDano;
 let somMorte;
 
 let pontuacao;

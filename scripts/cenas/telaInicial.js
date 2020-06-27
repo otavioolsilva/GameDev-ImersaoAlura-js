@@ -6,6 +6,7 @@ class TelaInicial {
     this._imgFundo();
     this._texto();
     this._btn();
+    this._spacebar();
   }
   
   _imgFundo() {
@@ -23,5 +24,9 @@ class TelaInicial {
   
   _btn() {
     btnGerenciador.draw();
+  }
+  
+  _spacebar() {
+    image(imgSpacebar, width/2 - (height/5), height - 50, height/2.5, height/14);
   }
 }

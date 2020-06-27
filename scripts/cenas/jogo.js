@@ -1,6 +1,8 @@
 class Jogo {
   constructor() {
-    this.inimigoAtual = 0; 
+    this.indice = 0;
+    
+    this.mapa = cartucho.mapa;
   }
   
   setup() {
@@ -9,10 +11,12 @@ class Jogo {
     cenario03 = new Cenario(imgCenario03, 1);
   
     personagem = new Personagem(imgPersonagem, 0, 25, 110, 135, 220, 270, 16);
+    
+    vida = new Vida(cartucho.configuracoes.vidaMaxima, cartucho.configuracoes.vidaInicial);
   
-    const inimigo = new Inimigo(imgInimigo, width - 52, 25, 52, 52, 104, 104, 28, 10, 100);
-    const inimigoVoador = new Inimigo(imgInimigoVoador, width - 52, 180, 52, 52, 200, 150, 16, 10, 100);
-    const inimigoGrande = new Inimigo(imgInimigoGrande, width, 10, 200, 200, 400, 400, 28, 10, 100);
+    const inimigo = new Inimigo(imgInimigo, width - 52, 25, 52, 52, 104, 104, 28, 10);
+    const inimigoVoador = new Inimigo(imgInimigoVoador, width - 52, 180, 52, 52, 200, 150, 16, 10);
+    const inimigoGrande = new Inimigo(imgInimigoGrande, width, 10, 200, 200, 400, 400, 28, 10);
   
     inimigos.push(inimigo);
     inimigos.push(inimigoGrande);
@@ -37,22 +41,29 @@ class Jogo {
   
     personagem.exibe();
     personagem.aplicaGravidade();
-  
-    const inimigo = inimigos[this.inimigoAtual];
+
+    const linhaAtual = this.mapa[this.indice];
+    const inimigo = inimigos[linhaAtual.inimigo];
     const inimigoVisivel = inimigo.x < -inimigo.largura;
+    
+    inimigo.velocidade = linhaAtual.velocidade;
 
     inimigo.exibe();
     inimigo.move();
 
     if(inimigoVisivel) {
-      this.inimigoAtual++;
-      if(this.inimigoAtual > 2) this.inimigoAtual = 0;
-      inimigo.velocidade = parseInt(random(8, 30));
+      this.indice++;
+      inimigo.aparece();
+      if(this.indice > this.mapa.length -1) this.indice = 0;
     }
 
     //Game over
     if(personagem.colisao(inimigo, inimigo.largura, inimigo.altura)) {
-      cenaAtual = 'gameover';
+      vida.perdeVida();
+      personagem.tornarInvencivel();
+      if(vida.vidas === 0) cenaAtual = 'gameover';
     }
+    
+    vida.draw();
   }
 }

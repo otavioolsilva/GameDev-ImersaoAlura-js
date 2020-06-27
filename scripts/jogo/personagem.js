@@ -10,6 +10,8 @@ class Personagem extends Animacao {
     this.alturaDoPulo = 25;
     this.gravidade = 2;
     this.contPulo = 0;
+    
+    this.invencivel = false;
   }
 
   pula() {
@@ -30,7 +32,19 @@ class Personagem extends Animacao {
     }
   }
 
+  tornarInvencivel() {
+    this.invencivel = true;
+    
+    setTimeout(() => {
+      this.invencivel = false;
+    }, 1000);
+  }
+  
   colisao(inimigo, largura, altura) {
+    if(this.invencivel) {
+      return false;
+    }
+      
     const estado = collideCircleCircle(this.x+55, this.y+70, this.altura/1.6, inimigo.x + (inimigo.largura/1.7), inimigo.y + (inimigo.altura/1.7), inimigo.altura/1.2);
     
     return estado;

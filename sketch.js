@@ -1,6 +1,7 @@
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(40);
+  somFundo.setVolume(0.4);
   somFundo.loop();
   
   btnGerenciador = new BtnGerenciador('Iniciar', 0, height/1.5);

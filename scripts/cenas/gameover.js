@@ -5,8 +5,9 @@ class GameOver {
   draw() {
     noLoop();
     somFundo.stop();
+    somMorte.setVolume(0.5);
     somMorte.play();
-    image(imgGameOver, width/2-206, height/2-78, height*0.88, height/6);
+    image(imgGameOver, width/2-206, height/2-78, 412, 78);
     
     this._btn();
   }
