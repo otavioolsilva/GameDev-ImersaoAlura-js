@@ -9,7 +9,7 @@
 # 🔖 Sobre
 **As Aventuras de Hipsta** é um jogo endless runner no qual a bruxinha hipsta tem que correr pela floresta a fim de alcançar seu objetivo: seu lar. Mas para isso, terá de enfrentar monstros assustadores.
 
-Projeto desenvolvido na [**Imersão GameDev JavaScript**]((https://www.alura.com.br/imersao-gamedev-javascript)) realizada pela @alura-cursos entre os dias 22 e 26 de Junho de 2020.
+Projeto desenvolvido na [**Imersão GameDev JavaScript**](https://www.alura.com.br/imersao-gamedev-javascript) realizada pela @alura-cursos entre os dias 22 e 26 de Junho de 2020.
 
 
 # 🚀 Tecnologias utilizadas
